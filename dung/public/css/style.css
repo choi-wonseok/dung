@@ -1,0 +1,229 @@
+#map {
+    width: 100%;
+    height: 900px;
+}
+#search {
+    position: fixed;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    left: 50%;
+    top: 30px;
+    transform: translateX(-50%);
+    background-color: white;
+    border: none;
+    border-radius: 10px;
+    padding: 10px;
+    width: 80%;
+    box-shadow: 7px 7px 7px gray;
+}
+#serach1 {
+    position: relative;
+    transform: translateY(2%);
+
+    color: black;
+    font-size: 1.2em;
+    display: inline-block;
+    width: auto;
+    height: 30px;
+    vertical-align: middle;
+    text-align: center;
+    text-decoration: none;
+}
+#serach2 {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    background: url("../image/add.png") no-repeat 0 0 / 20px auto;
+    vertical-align: middle;
+}
+
+input[id="menuicon"] {
+    display: none;
+}
+.menubtn {
+    display: block;
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    left: 10px;
+    top: 15px;
+    cursor: pointer;
+}
+.menubtn span {
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 3px;
+    border-radius: 30px;
+    background: #000;
+    transition: all.35s;
+}
+.menubtn span:nth-child(1) {
+    top: 0;
+}
+.menubtn span:nth-child(2) {
+    top: 50%;
+    transform: translateY(-50%);
+}
+.menubtn span:nth-child(3) {
+    bottom: 0;
+}
+.container {
+    width: 100%;
+    position: relative;
+}
+.container .sidebar {
+    width: 20%;
+    height: 100%;
+    background: #fff;
+    position: fixed;
+    top: 0;
+    left: -40%;
+    z-index: 1;
+    transition: all 0.35s;
+}
+input[id="menuicon"]:checked ~ .container .sidebar {
+    left: 0;
+}
+
+nav a {
+    text-decoration: none;
+    color: black;
+    margin: 2em;
+    display: flex;
+    font-size: "20";
+}
+#horizontal-underline {
+    position: absolute;
+}
+
+.img-content {
+    width: 20px;
+    height: 20px;
+    padding: 5px;
+    background: url("../image/FancyMapsMarker.png") no-repeat 0 0/20px auto;
+    opacity: 75%;
+    text-align: center;
+}
+
+.icon-content {
+    position: relative;
+    left: calc(10px - 50%);
+    padding: 5px;
+    background-color: #fff;
+    text-align: center;
+    border: 1px solid #831616;
+    border-radius: 14px;
+    display: none;
+    z-index: 1;
+}
+
+.content-name {
+    font-weight: bold;
+    font-size: 14px;
+}
+
+.content-detail {
+    font-weight: normal;
+    font-size: 13px;
+    margin-top: 3px;
+}
+/* #navClose {
+    display: block;
+    position: fixed;
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+} */
+/* 2 */
+.my-img-content {
+    width: 40px;
+    height: 40px;
+    padding: 5px;
+    background: url("../image/FancyMapsCurrentLocation.png") no-repeat 0 0/40px
+        auto;
+    opacity: 75%;
+    text-align: center;
+}
+
+.closest-img-content {
+    width: 20px;
+    height: 20px;
+    padding: 5px;
+    background: url("../image/ClosestFancyMapsMarker.png") no-repeat 0 0/20px
+        auto;
+    opacity: 75%;
+    text-align: center;
+}
+
+#image_0 {
+    background: url("../image/ClosestFancyMapsMarker.png") no-repeat 0 0/20px
+        auto;
+}
+
+.btn_mylct {
+    position: relative;
+    cursor: pointer;
+    width: 40px;
+    height: 50px;
+    background: url("../image/Icon\ material-my-location.png") no-repeat 0 0/40px
+        auto;
+    left: -20%;
+    top: -40px;
+}
+* {
+    margin: 0;
+    padding: 0;
+}
+body,
+html {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+.header {
+    width: 10%;
+    height: 50px;
+    background: white;
+}
+.menu_btn {
+    text-align: right;
+    padding: 10px;
+}
+.menu_bg {
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    position: absolute;
+    top: 0;
+    display: none;
+}
+.sidebar_menu {
+    display: none;
+    width: 40%;
+    height: 100%;
+    background: honeydew;
+    position: absolute;
+    top: 0;
+    left: -50%;
+}
+.close_btn {
+    width: 25px;
+    height: 25px;
+    margin: 10px;
+}
+.close_btn > a {
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+.menu_wrap {
+    list-style: none;
+    padding: 20px 20px;
+}
+.menu_wrap li a {
+    color: black;
+    text-decoration: none;
+}
