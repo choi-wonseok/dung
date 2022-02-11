@@ -42,7 +42,7 @@ Log::info($latMin);
     }
 
     return view('startpage', ["rows" => $rows, "uid" => $uid]);
-});
+})->middleware('forcessl');
 
 // Route::get('/', function (Request $request) {
 //     $latMin = $request->input('latMin', 37);
