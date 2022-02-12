@@ -21,7 +21,7 @@
 
 <body>
     <div class="loading">
-        <img class="loadingimg"src="/image/ddong.jpg" alt="loading">
+        <img src="/image/ddong.jpg" alt="loading">
     </div>
     @foreach ($rows as $row)
     <div class="toilet" toiletName="{{ $row->toiletName }}" toiletNum="{{$row->toiletNum}}"
