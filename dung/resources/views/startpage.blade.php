@@ -20,6 +20,9 @@
 </head>
 
 <body>
+    <div class="loading">
+        <img class="loadingimg"src="/image/ddong.jpg" alt="loading">
+    </div>
     @foreach ($rows as $row)
     <div class="toilet" toiletName="{{ $row->toiletName }}" toiletNum="{{$row->toiletNum}}"
         toiletDetail="{{$row->toiletDetail}}" lat="{{$row->lat}}" lng="{{$row->lng}}" distance="{{$row->distance}}"></div>
