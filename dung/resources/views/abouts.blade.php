@@ -19,7 +19,7 @@
         <!-- Product section-->
         <section class="py-5">
             <div class="container px-4 px-lg-5 my-5">
-                <div class="row gx-4 gx-lg-5 align-items-center">
+                <div class="row_col_md_6_d">
                     <div class="col-md-6"><img class="card-img-top mb-5 mb-md-0" src="/image/ddong.jpg" alt="..." /></div>
                     <div class="col-md-6">
                         <h4 class="display-5 fw-bolder">급똥엔젤에 대해...</h4>
@@ -34,7 +34,7 @@
 
 
         </section>
-        <footer class="py-5 bg-darks">
+        <footer class="py-5 bg-dark">
             <div class="container"><p class="m-0 text-center text-white">X세대 &copy; 최현 최원석 임근웅 2022</p></div>
         </footer>
         <!-- Bootstrap core JS-->
