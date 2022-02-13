@@ -41,7 +41,7 @@
             </div>
         </div>
 
-        <a href="nmap://route/walk?slat=37.4640070&slng=126.9522394&dlat=@if (count($rows)) {{ $rows[0]->lat }} @endif&dlng=@if (count($rows)) {{ $rows[0]->lng }} @endif&appname=x-angels.ml" id="serach1">@if (count($rows)) {{ $rows[0]->toiletName }} @endif</a>
+        <a href="nmap://route/walk?dlat=@if (count($rows)) {{ $rows[0]->lat }} @endif&dlng=@if (count($rows)) {{ $rows[0]->lng }} @endif&appname=x-angels.ml" id="serach1">@if (count($rows)) {{ $rows[0]->toiletName }} @endif</a>
         <a href="plustoilet" id="serach2"></a>
     </div>
     <div class="Tlist" onclick="showPopup(true)">목록보기</div>
