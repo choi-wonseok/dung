@@ -42,7 +42,7 @@
             </div>
         </div>
 
-        <a href="nmap://route/walk?slat=null&slng=null&sname=null&dlat=37.4764356&dlng=126.9618302&dname=null&appname=https://x-angels.ml" id="serach1">@if (count($rows)){{ $rows[0]->toiletName }}@endif</a>
+        <a href="nmap://route/walk?slat=null&slng=null&sname=null&dlat=37.4764356&dlng=126.9618302&dname=화장실&appname=https://x-angels.ml" id="serach1">@if (count($rows)){{ $rows[0]->toiletName }}@endif</a>
 
         <a href="plustoilet" id="serach2"></a>
     </div>
