@@ -24,7 +24,7 @@
 
 <body>
     <div class="loading">
-        <img src="/image/ddong.jpg" alt="loading">
+        <div id="loading-img"></div>
     </div>
     @foreach ($rows as $row)
     <div class="toilet" toiletName="{{ $row->toiletName }}" toiletNum="{{$row->toiletNum}}"
@@ -48,7 +48,7 @@
     </div>
     <div class="Tlist" onclick="showPopup(true)">목록보기</div>
     <div id="popup" class="hide">
-        <div class="content">
+        <div id="content" class="hide">
             <div class="popup_header">목록보기</div>
 
             @foreach ($rows as $row)
@@ -67,9 +67,9 @@
                 더보기
             </button>
             <button class="close" onclick="closePopup(true)">닫기</button>
-
         </div>
     </div>
+
     <div class="menu_bg"></div>
     <div id="sidebar_menu">
         <div class="close_btn"><a href="#">
