@@ -22,7 +22,7 @@
                         <div class="col-lg-5">
                             <div class="card shadow-lg border-0 rounded-lg mt-5">
                                 <div class="card-header">
-                                    <div id="return" onmouseover="bold" onclick="location.href='/'"></div>
+                                    <div id="return" onclick="location.href='/'"></div>
                                     <h3 class="text-center font-weight-light my-4">
                                         <i class="fas fa-poo"></i>&nbsp급똥엔젤
                                     </h3>

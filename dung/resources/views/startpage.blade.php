@@ -16,6 +16,9 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
     <script src="/js/motion.js"></script>
     <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+    <script src="https://code.jquery.com/jquery-2.1.4.js"></script>
+    <script src="http://code.jquery.com/jquery-1.9.1.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <link rel="stylesheet" href="/css/style.css" />
 </head>
 
@@ -41,18 +44,42 @@
         <a href="#a" id="serach1">@if (count($rows)) {{ $rows[0]->toiletName }} @endif</a>
         <a href="plustoilet" id="serach2"></a>
     </div>
+    <div class="Tlist" onclick="showPopup(true)">목록보기</div>
+    <div id="popup" class="hide">
+        <div class="content">
+            <div class="popup_header">목록보기</div>
+
+            @foreach ($rows as $row)
+            <div class="info">
+
+                <a class="Tname" href="#"> {{ $row->toiletName }}</a>
+                <p class="dis"><?php echo floor($row->distance*1000)
+                    ?> m</span>
+
+
+                <p>상세정보: {{$row->toiletDetail}}</p>
+
+            </div>
+            @endforeach
+            <button class="more" id="more" >
+                더보기
+            </button>
+            <button class="close" onclick="closePopup(true)">닫기</button>
+
+        </div>
+    </div>
     <div class="menu_bg"></div>
-    <div class="sidebar_menu">
+    <div id="sidebar_menu">
         <div class="close_btn"><a href="#">
             <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0Ij48cGF0aCBkPSJNMjMuOTU0IDIxLjAzbC05LjE4NC05LjA5NSA5LjA5Mi05LjE3NC0yLjgzMi0yLjgwNy05LjA5IDkuMTc5LTkuMTc2LTkuMDg4LTIuODEgMi44MSA5LjE4NiA5LjEwNS05LjA5NSA5LjE4NCAyLjgxIDIuODEgOS4xMTItOS4xOTIgOS4xOCA5LjF6Ii8+PC9zdmc+">
             </a>
         </div>
         <ul class="menu_wrap">
-            <li><a href="login">{{$uid ?? "로그인"}}</a></li>
+            <li><a href="/login">{{$uid ?? "로그인"}}</a></li>
             <li><a href="#">메뉴02</a></li>
-            <li><a href="#">메뉴03</a></li>
+            <li><a href="/about">about</a></li>
             <li>  @if ($uid != null)
-                <a href="logout">로그아웃</a>
+                <a href="/logout">로그아웃</a>
                 @endif</li>
         </ul>
     </div>

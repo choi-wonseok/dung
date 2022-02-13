@@ -200,7 +200,7 @@ html {
     top: 0;
     display: none;
 }
-.sidebar_menu {
+#sidebar_menu {
     display: none;
     width: 40%;
     height: 100%;
@@ -209,6 +209,10 @@ html {
     top: 0;
     left: -50%;
 }
+#sidebar_menu.hide {
+    display: none;
+}
+
 .close_btn {
     width: 25px;
     height: 25px;
@@ -242,4 +246,81 @@ html {
     position: absolute;
     top: 40%;
     left: 25%;
+}
+.Tlist {
+    position: fixed;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    left: 50%;
+    top: 90%;
+    transform: translateX(-50%);
+    background-color: white;
+    border: none;
+    border-radius: 10px;
+    padding: 10px;
+    width: 16%;
+    box-shadow: 7px 7px 7px gray;
+}
+.close {
+    cursor: pointer;
+    border: none;
+    margin-left: 100px;
+}
+
+#popup {
+    display: flex;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 100;
+    overflow-y: scroll;
+}
+
+.popup_header {
+    position: relative;
+    text-align: center;
+    font-size: 17px;
+    border-bottom: 1px solid #888;
+    font-weight: 1000;
+}
+#popup.hide {
+    display: none;
+}
+
+#popup.has-filter {
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+}
+
+.content {
+    margin-top: auto;
+    margin-left: 26px;
+    padding: 20px;
+    background: #fff;
+    border-radius: 44px;
+    box-shadow: 9px 5px 8px rgb(0 0 0 / 30%);
+}
+.info {
+    position: relative;
+    border-bottom: 1px solid #888;
+    overflow: hidden;
+    cursor: pointer;
+    min-height: 45px;
+    display: none;
+}
+
+.Tname {
+    font-size: 20px;
+    font-weight: 900;
+}
+.dis {
+    text-align: right;
+}
+.more {
+    margin-left: 35%;
+    border: none;
 }
