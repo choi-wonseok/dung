@@ -30,10 +30,7 @@
                     </div>
                     <script src="/js/add.js"></script>
                     <div class="row justify-content-center">
-                        <div class="col-lg-5">
-                            <div class="card shadow-lg border-0 rounded-lg mt-5">
-
-                                <div class="card-body">
+                                 <div class="card-body">
                                     <form action="/plustoilet" method="POST">
                                         @csrf
                                         <div class="form-floating mb-3">
@@ -80,8 +77,7 @@
                                 </div>
                             </div>
                         </div>
-                    </div>
-                </div>
+
         </div>
         </main>
     </div>
