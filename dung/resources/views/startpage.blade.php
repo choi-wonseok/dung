@@ -16,7 +16,14 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
     <script src="/js/motion.js"></script>
     <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+   <script src="https://code.jquery.com/jquery-2.1.4.js"></script>
+      <script src="http://code.jquery.com/jquery-1.9.1.js"></script>
+<<<<<<< HEAD
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+=======
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+>>>>>>> 3b52a2e625270e2a0280cd3559d52698cfc85441
     <link rel="stylesheet" href="/css/style.css" />
 </head>
 
