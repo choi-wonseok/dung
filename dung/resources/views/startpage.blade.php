@@ -76,8 +76,8 @@
         </div>
         <ul class="menu_wrap">
             <li><a href="/login">{{$uid ?? "로그인"}}</a></li>
-            <li><a href="#">메뉴02</a></li>
-            <li><a href="/about">about</a></li>
+            <li><a href="/abouts">About</a></li>
+            <li><a href="/maker">제작자</a></li>
             <li>  @if ($uid != null)
                 <a href="/logout">로그아웃</a>
                 @endif</li>
