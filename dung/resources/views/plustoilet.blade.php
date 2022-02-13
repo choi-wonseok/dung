@@ -71,11 +71,6 @@
                                 </div>
                                 </form>
                             </div>
-
-                            <div class="card-footer text-center py-3">
-                                <div class="small">
-                                </div>
-                            </div>
                         </div>
 
         </div>
