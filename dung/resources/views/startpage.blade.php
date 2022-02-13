@@ -13,11 +13,12 @@
     <title>급.똥엔젤.</title>
     <script type="text/javascript" src="https://openapi.map.naver.com/openapi/v3/maps.js?ncpClientId=9426lfdjn0">
     </script>
+    <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+    <script src="https://code.jquery.com/jquery-2.1.4.js"></script>
+    <script src="https://code.jquery.com/jquery-1.9.1.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
     <script src="/js/motion.js"></script>
-    <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
-
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <link rel="stylesheet" href="/css/style.css" />
 </head>
 
@@ -40,7 +41,7 @@
             </div>
         </div>
 
-        <a href="#a" id="serach1">@if (count($rows)) {{ $rows[0]->toiletName }} @endif</a>
+        <a href="nmap://route/walk?slat=37.4640070&slng=126.9522394&dlat=@if (count($rows)) {{ $rows[0]->lat }} @endif&dlng=@if (count($rows)) {{ $rows[0]->lng }} @endif&appname=x-angels.ml" id="serach1">@if (count($rows)) {{ $rows[0]->toiletName }} @endif</a>
         <a href="plustoilet" id="serach2"></a>
     </div>
     <div class="Tlist" onclick="showPopup(true)">목록보기</div>
