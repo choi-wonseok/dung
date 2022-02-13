@@ -305,8 +305,9 @@ html {
 }
 
 .content {
+    left: 50%;
+    transform: translateX(50%);
     margin-top: auto;
-    margin-left: 26px;
     padding: 20px;
     background: #fff;
     border-radius: 44px;
