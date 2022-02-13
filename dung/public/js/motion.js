@@ -17,7 +17,6 @@ $(document).ready(function () {
         );
     });
 });
-
 $(document).mouseup(function (e) {
     var target = $("#sidebar_menu");
     if (target.has(e.target).length == 0) {
@@ -34,6 +33,7 @@ $(window).load(function () {
 
 function showPopup(hasFilter) {
     const popup = document.querySelector("#popup");
+    const content = document.querySelector("#content");
 
     if (hasFilter) {
         popup.classList.add("has-filter");
@@ -42,6 +42,7 @@ function showPopup(hasFilter) {
     }
 
     popup.classList.remove("hide");
+    content.classList.remove("hide");
 }
 
 $(document).mouseup(function (e) {
@@ -53,11 +54,13 @@ $(document).mouseup(function (e) {
 
 function closePopup() {
     const popup = document.querySelector("#popup");
+    const content = document.querySelector("#content");
     popup.classList.add("hide");
+    content.classList.add("hide");
 }
 
 $(function () {
-    $(".info").slice(0, 10).show();
+    $(".info").slice(0, 5).show();
     $("#more").on("click", function (e) {
         e.preventDefault();
         $(".info:hidden").slice(0, 4).fadeIn("slow");
