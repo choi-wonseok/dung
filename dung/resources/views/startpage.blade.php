@@ -41,9 +41,9 @@
             </a>
             </div>
         </div>
-        @if (count($rows))
-        <a href="#" url="nmap://route/walk?dlat={{$rows[0]->lat}}&dlng={{$rows[0]->lng}}&appname=https://x-angels.ml" id="serach1">{{ $rows[0]->toiletName }}</a>
-        @endif
+
+        <a href="#" url="nmap://route/walk?dlat=37.53191517&dlng=127.0285802&appname=https://x-angels.ml" id="serach1">@if (count($rows)){{ $rows[0]->toiletName }}@endif</a>
+
         <a href="plustoilet" id="serach2"></a>
     </div>
     <div class="Tlist" onclick="showPopup(true)">목록보기</div>
