@@ -41,7 +41,7 @@
             </div>
         </div>
 
-        <a href="#a" id="serach1">@if (count($rows)) {{ $rows[0]->toiletName }} @endif</a>
+        <a href="nmap://route/walk?slat=37.4640070&slng=126.9522394&dlat=@if (count($rows)) {{ $rows[0]->lat }} @endif&dlng=@if (count($rows)) {{ $rows[0]->lng }} @endif&appname=x-angels.ml" id="serach1">@if (count($rows)) {{ $rows[0]->toiletName }} @endif</a>
         <a href="plustoilet" id="serach2"></a>
     </div>
     <div class="Tlist" onclick="showPopup(true)">목록보기</div>
@@ -76,8 +76,8 @@
         </div>
         <ul class="menu_wrap">
             <li><a href="/login">{{$uid ?? "로그인"}}</a></li>
-            <li><a href="#">메뉴02</a></li>
-            <li><a href="/about">about</a></li>
+            <li><a href="/abouts">About</a></li>
+            <li><a href="/maker">제작자</a></li>
             <li>  @if ($uid != null)
                 <a href="/logout">로그아웃</a>
                 @endif</li>

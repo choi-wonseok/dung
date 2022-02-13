@@ -59,8 +59,11 @@ Route::post('/login', [inside::class , 'login']);
 Route::get('/logout', [inside::class , 'logout']);
 
 
-Route::get('/about', function () {
-    return view('about');
+Route::get('/maker', function () {
+    return view('maker');
+});
+Route::get('/abouts', function () {
+    return view('abouts');
 });
 Route::get('/add', function () {
     return view('add');
