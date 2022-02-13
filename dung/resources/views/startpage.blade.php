@@ -30,6 +30,12 @@
     <div class="toilet" toiletName="{{ $row->toiletName }}" toiletNum="{{$row->toiletNum}}"
         toiletDetail="{{$row->toiletDetail}}" lat="{{$row->lat}}" lng="{{$row->lng}}" distance="{{$row->distance}}"></div>
     @endforeach
+    @if (count($rows))
+    <?
+        string lat = {{$rows[0]->lat}}
+        string lng = {{$rows[0]->lng}}
+    ?>
+    @endif
     <input type="checkbox" id="menuicon" />
     <div id="map"></div>
     <script src="/js/main.js"></script>
@@ -41,7 +47,7 @@
             </div>
         </div>
 
-        <a href="nmap://route/walk?dlat=@if (count($rows)) {{ $rows[0]->lat }} @endif&dlng=@if (count($rows)) {{ $rows[0]->lng }} @endif&appname=x-angels.ml" id="serach1">@if (count($rows)) {{ $rows[0]->toiletName }} @endif</a>
+        <a href="nmap://route/walk?dlat=<%=lat%>&dlng=<%=lng%>&appname=x-angels.ml" id="serach1">@if (count($rows)) {{ $rows[0]->toiletName }} @endif</a>
         <a href="plustoilet" id="serach2"></a>
     </div>
     <div class="Tlist" onclick="showPopup(true)">목록보기</div>
