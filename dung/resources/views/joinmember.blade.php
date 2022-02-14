@@ -54,7 +54,6 @@
                                             <input class="form-control" name="inputPasswordcheck" type="password"
                                                 placeholder="Password" />
                                             <label for="inputPasswordcheck">비밀번호 확인</label>
-                                            <br></br>
                                             <button type="submit" class="btn btn-dark">확인</button>
                                         </div>
                                     </form>
