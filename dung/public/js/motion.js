@@ -60,7 +60,7 @@ function closePopup() {
 }
 
 $(function () {
-    $(".info").slice(0, 6).show();
+    $(".info").slice(0, 7).show();
     $("#more").on("click", function (e) {
         e.preventDefault();
         $(".info:hidden").slice(0, 4).fadeIn("slow");
