@@ -54,11 +54,11 @@
                                             <input class="form-control" name="inputPasswordcheck" type="password"
                                                 placeholder="Password" />
                                             <label for="inputPasswordcheck">비밀번호 확인</label>
+                                            <br></br>
                                             <button type="submit" class="btn btn-dark">확인</button>
                                         </div>
                                     </form>
                                 </div>
-                                <br></br>
                                 <div class="card-footer text-center py-3">
                                     <div class="small">
                                         <a href="login" style="color: black">로그인하기</a>
