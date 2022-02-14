@@ -12264,8 +12264,7 @@ body {
     transform: translate(-50%, -50%);
     width: 30px;
     height: 40px;
-    background: url("../image/ClosestFancyMapsMarker.png") no-repeat 0 0/30px
-        auto;
+    background: url("../image/ClosestFancyMapsMarker.png") no-repeat 0 0/30px auto;
     z-index: 1;
 }
 
