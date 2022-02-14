@@ -3,9 +3,9 @@
 namespace App\Http\Middleware;
 
 use Closure;
-use Illuminate\Http\Client\Request;
+use Illuminate\Http\Request;
 
-class HttpsRedirect
+class HttpsProtocol
 {
     public function handle(Request $request, Closure $next) {
       if (!$request->secure()) //http면
