@@ -33,9 +33,9 @@
 }
 #serach2 {
     display: inline-block;
-    width: 20px;
-    height: 20px;
-    background: url("../image/add.png") no-repeat 0 0 / 20px auto;
+    width: 30px;
+    height: 30px;
+    background: url("../image/add.png") no-repeat 0 0 / 30px auto;
     vertical-align: middle;
 }
 
