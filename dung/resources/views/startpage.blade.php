@@ -52,15 +52,11 @@
             <div class="popup_header">목록보기</div>
 
             @foreach ($rows as $row)
-            <div class="info">
-
+            <div class="info" id="toilet_{{ $row->toiletNum }}">
                 <a class="Tname" href="#"> {{ $row->toiletName }}</a>
                 <p class="dis"><?php echo floor($row->distance*1000)
                     ?> m</span>
-
-
                 <p>상세정보: {{$row->toiletDetail}}</p>
-
             </div>
             @endforeach
             <button class="more" id="more" >
@@ -85,7 +81,6 @@
                 @endif</li>
         </ul>
     </div>
-
 </body>
 
 </html>
