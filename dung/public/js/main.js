@@ -77,7 +77,7 @@ function getLocation() {
                         map: map,
                         icon: {
                             content: [
-                                `<div class="img-content" id="image_${index}" onmouseover="javascript:overCrime(\'toilet_${index}\');" onmouseout="javascript:outCrime(\'toilet_${index}\');"></div>` +
+                                `<div class="img-content" id="image_${index}"></div>` +
                                     `<div class="icon-content" id="toilet_${index}">` +
                                     `<div class="content-name"><a class="link"; href="nmap://route/walk?slat=null&slng=null&sname=null&dlat=${row.attr(
                                         "lat"
