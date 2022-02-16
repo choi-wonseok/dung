@@ -14,7 +14,7 @@
     <script type="text/javascript" src="https://openapi.map.naver.com/openapi/v3/maps.js?ncpClientId=9426lfdjn0&submodules=geocoder"><script>
     <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
 </head>
-
+<script defer src="/js/add.js"></script>
 <body class="bg-white">
     <div id="layoutAuthentication">
         <div id="layoutAuthentication_content">
@@ -87,7 +87,5 @@
     </div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous">
     </script>
-    <script src="js/scripts.js"></script>
 </body>
-<script src="/js/add.js"></script>
 </html>
