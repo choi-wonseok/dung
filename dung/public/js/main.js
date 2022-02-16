@@ -82,7 +82,7 @@ function getLocation() {
                                     `<div class="content-name"><a href="nmap://route/walk?slat=null&slng=null&sname=null&dlat=${row.attr(
                                         "lat"
                                     )}&dlng=${row.attr("lng")}&dname=${row.attr(
-                                        "tolietName"
+                                        "toiletName"
                                     )}&appname=https://x-angels.ml"> ${row.attr(
                                         "toiletName"
                                     )} </div>` +
