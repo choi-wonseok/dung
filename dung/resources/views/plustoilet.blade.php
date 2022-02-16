@@ -12,7 +12,6 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/js/all.min.js" crossorigin="anonymous"></script>
     <script type="text/javascript" src="https://openapi.map.naver.com/openapi/v3/maps.js?ncpClientId=9426lfdjn0&submodules=geocoder"><script>
     <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
-    <script defer src="/js/add.js"></script>
 </head>
 <body class="bg-white">
     <div id="layoutAuthentication">
@@ -27,6 +26,7 @@
                     <div id="add-map">
                         <div class="center-marker"></div>
                     </div>
+                    <script defer src="/js/add.js"></script>
                     <div class="row justify-content-center">
                                  <div class="card-body">
                                     <form action="/plustoilet" method="POST">
