@@ -26,7 +26,7 @@
                     <div id="add-map">
                         <div class="center-marker"></div>
                     </div>
-                    <script defer src="/js/add.js"></script>
+                    <script async src="/js/add.js"></script>
                     <div class="row justify-content-center">
                                  <div class="card-body">
                                     <form action="/plustoilet" method="POST">
