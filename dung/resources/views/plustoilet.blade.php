@@ -28,7 +28,6 @@
                     <div id="add-map">
                         <div class="center-marker"></div>
                     </div>
-                    <script src="/js/add.js"></script>
                     <div class="row justify-content-center">
                                  <div class="card-body">
                                     <form action="/plustoilet" method="POST">
@@ -90,4 +89,5 @@
     </script>
     <script src="js/scripts.js"></script>
 </body>
+<script src="/js/add.js"></script>
 </html>
