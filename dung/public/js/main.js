@@ -79,7 +79,11 @@ function getLocation() {
                             content: [
                                 `<div class="img-content" id="image_${index}" onmouseover="javascript:overCrime(\'toilet_${index}\');" onmouseout="javascript:outCrime(\'toilet_${index}\');"></div>` +
                                     `<div class="icon-content" id="toilet_${index}">` +
-                                    `<div class="content-name"> ${row.attr(
+                                    `<div class="content-name"><a href="nmap://route/walk?slat=null&slng=null&sname=null&dlat=${row.attr(
+                                        "lat"
+                                    )}&dlng=${row.attr("lng")}&dname=${row.attr(
+                                        "tolietName"
+                                    )}&appname=https://x-angels.ml"> ${row.attr(
                                         "toiletName"
                                     )} </div>` +
                                     `<div class="content-detail"> ${row.attr(
