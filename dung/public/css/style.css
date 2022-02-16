@@ -121,6 +121,7 @@ nav a {
 .content-name {
     font-weight: bold;
     font-size: 14px;
+    text-decoration: none;
 }
 
 .content-detail {
@@ -328,6 +329,7 @@ html {
     cursor: pointer;
     min-height: 45px;
     display: none;
+    text-decoration: none;
 }
 
 .Tname {
