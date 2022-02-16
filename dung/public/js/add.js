@@ -93,14 +93,15 @@ function searchCoordinateToAddress(latlng) {
     );
 }
 console.log(1);
-function initGeocoder() {
-    console.log(3);
-    naver.maps.Event.addListener(map, "bounds_changed", function (center) {
+naver.maps.Event.addListener(map, "bounds_changed", function (center) {
+    function initGeocoder() {
+        console.log(3);
+
         searchCoordinateToAddress(center);
         console.log(center);
         document.getElementsByName("lat").item(0).value = center._lat;
         document.getElementsByName("lng").item(0).value = center._lng;
-    });
-}
-console.log(2);
-naver.maps.onJSContentLoaded = initGeocoder;
+    }
+    console.log(2);
+    naver.maps.onJSContentLoaded = initGeocoder;
+});
