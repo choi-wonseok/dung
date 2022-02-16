@@ -95,8 +95,9 @@ navigator.geolocation.getCurrentPosition(function (position) {
             }
         );
     }
-
+    console.log(111);
     function initGeocoder() {
+        console.log(112);
         naver.maps.Event.addListener(map, "center_changed", function (center) {
             searchCoordinateToAddress(center);
             console.log(center._lat, center._lng);
