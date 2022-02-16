@@ -12240,6 +12240,8 @@ body {
 }
 
 #return {
+    position: absolute;
+    top: 36px;
     display: inline-block;
     width: 20px;
     height: 20px;
@@ -12255,7 +12257,8 @@ body {
     position: relative;
     width: 40px;
     height: 50px;
-    background: url("../image/iconMaterialMyLocation.png") no-repeat 0 0/40px auto;
+    background: url("../image/iconMaterialMyLocation.png") no-repeat 0 0/40px
+        auto;
 }
 .center-marker {
     position: absolute;
@@ -12264,7 +12267,8 @@ body {
     transform: translate(-50%, -50%);
     width: 30px;
     height: 40px;
-    background: url("../image/ClosestFancyMapsMarker.png") no-repeat 0 0/30px auto;
+    background: url("../image/ClosestFancyMapsMarker.png") no-repeat 0 0/30px
+        auto;
     z-index: 1;
 }
 
