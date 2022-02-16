@@ -94,7 +94,7 @@ function searchCoordinateToAddress(latlng) {
 }
 
 function initGeocoder() {
-    naver.maps.Event.addListener(map, "center_changed", function (center) {
+    naver.maps.Event.addListener(map, "bounds_changed", function (center) {
         searchCoordinateToAddress(center);
         document.getElementsByName("lat").item(0).value = center._lat;
         document.getElementsByName("lng").item(0).value = center._lng;
