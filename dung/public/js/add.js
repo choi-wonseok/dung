@@ -96,11 +96,8 @@ function searchCoordinateToAddress(latlng) {
 function initGeocoder() {
     naver.maps.Event.addListener(map, "center_changed", function (center) {
         searchCoordinateToAddress(center);
-        console.log(center._lat, center._lng);
-        var center_lat = center._lat;
-        var center_lng = center._lng;
-        document.getElementsByName("lat").item(0).value = center_lat;
-        document.getElementsByName("lng").item(0).value = center_lng;
+        document.getElementsByName("lat").item(0).value = center._lat;
+        document.getElementsByName("lng").item(0).value = center._lng;
     });
 }
 
