@@ -92,7 +92,7 @@ function searchCoordinateToAddress(latlng) {
         }
     );
 }
-
+console.log(1);
 function initGeocoder() {
     naver.maps.Event.addListener(map, "bounds_changed", function (center) {
         searchCoordinateToAddress(center);
@@ -101,5 +101,5 @@ function initGeocoder() {
         document.getElementsByName("lng").item(0).value = center._lng;
     });
 }
-
+console.log(2);
 naver.maps.onJSContentLoaded = initGeocoder;
