@@ -93,7 +93,7 @@ function searchCoordinateToAddress(latlng) {
 }
 
 function initGeocoder() {
-    naver.maps.Event.addListener(map, "center_changed", function (center) {
+    map.addListener("center_changed", function (center) {
         searchCoordinateToAddress(center);
         console.log(center._lat, center._lng);
         var center_lat = center._lat;
