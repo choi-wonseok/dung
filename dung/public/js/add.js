@@ -94,7 +94,7 @@ function searchCoordinateToAddress(latlng) {
 console.log(1);
 function initGeocoder() {
     console.log(2);
-    naver.maps.addListener(map, "center_changed", function (center) {
+    naver.maps.Event.addListener(map, "center_changed", function (center) {
         console.log(3);
         searchCoordinateToAddress(center);
         console.log(center._lat, center._lng);
@@ -106,5 +106,4 @@ function initGeocoder() {
     console.log(4);
 }
 console.log(5);
-
 naver.maps.onJSContentLoaded = initGeocoder;
