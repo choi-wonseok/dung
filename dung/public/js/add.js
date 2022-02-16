@@ -1,7 +1,6 @@
 var locationBtnHtml =
     '<div class="btn_mylct"><a href="#" ><span class="spr_trff spr_ico_mylct"></spa' +
     "n></a></div>";
-// var map;
 
 function initGeocoder() {
     navigator.geolocation.getCurrentPosition(function (position) {
