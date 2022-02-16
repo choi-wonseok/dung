@@ -95,9 +95,11 @@ navigator.geolocation.getCurrentPosition(function (position) {
             }
         );
     }
-
+    console.log(1);
     function initGeocoder() {
+        console.log(2);
         map.addListener("center_changed", function (center) {
+            console.log(3);
             searchCoordinateToAddress(center);
             console.log(center._lat, center._lng);
             var center_lat = center._lat;
@@ -105,7 +107,9 @@ navigator.geolocation.getCurrentPosition(function (position) {
             document.getElementsByName("lat").item(0).value = center_lat;
             document.getElementsByName("lng").item(0).value = center_lng;
         });
+        console.log(4);
     }
+    console.log(5);
 
     naver.maps.onJSContentLoaded = initGeocoder;
 });
