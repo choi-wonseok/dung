@@ -79,13 +79,13 @@ function getLocation() {
                             content: [
                                 `<div class="img-content" id="image_${index}" onmouseover="javascript:overCrime(\'toilet_${index}\');" onmouseout="javascript:outCrime(\'toilet_${index}\');"></div>` +
                                     `<div class="icon-content" id="toilet_${index}">` +
-                                    `<div class="content-name"><a href="nmap://route/walk?slat=null&slng=null&sname=null&dlat=${row.attr(
+                                    `<div class="content-name"><a class="link"; href="nmap://route/walk?slat=null&slng=null&sname=null&dlat=${row.attr(
                                         "lat"
                                     )}&dlng=${row.attr("lng")}&dname=${row.attr(
                                         "toiletName"
                                     )}&appname=https://x-angels.ml"> ${row.attr(
                                         "toiletName"
-                                    )} </div>` +
+                                    )}</a></div>` +
                                     `<div class="content-detail"> ${row.attr(
                                         "toiletDetail"
                                     )} <br> ${(
@@ -97,6 +97,19 @@ function getLocation() {
                             anchor: new naver.maps.Point(19, 58),
                         },
                         draggable: false,
+                    });
+
+                    $(document).ready(function () {
+                        $("#image_" + index).click(function (event) {
+                            event.stopPropagation();
+                            $("#toilet_" + index).slideToggle("slow");
+                        });
+                        $("#toilet_" + index).on("click", function (event) {
+                            event.stopPropagation();
+                        });
+                    });
+                    $(document).on("click", function () {
+                        $("#toilet_" + index).hide();
                     });
                 });
 
