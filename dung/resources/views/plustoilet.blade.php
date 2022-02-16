@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -13,8 +12,8 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/js/all.min.js" crossorigin="anonymous"></script>
     <script type="text/javascript" src="https://openapi.map.naver.com/openapi/v3/maps.js?ncpClientId=9426lfdjn0&submodules=geocoder"><script>
     <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+    <script defer src="/js/add.js"></script>
 </head>
-<script defer src="/js/add.js"></script>
 <body class="bg-white">
     <div id="layoutAuthentication">
         <div id="layoutAuthentication_content">
@@ -69,9 +68,8 @@
                                         <button type="submit" class="btn btn-dark" >확인</button>
                                 </div>
                                 </form>
-                            </div>
                         </div>
-
+                    </div>
         </div>
         </main>
     </div>
