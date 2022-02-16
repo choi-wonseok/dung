@@ -11844,7 +11844,6 @@ body {
 #layoutAuthentication {
     display: flex;
     flex-direction: column;
-    min-height: 100vh;
     background-color: whitesmoke;
 }
 #layoutAuthentication #layoutAuthentication_content {
