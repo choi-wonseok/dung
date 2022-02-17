@@ -42,7 +42,7 @@
             </div>
         </div>
         @if (count($rows))
-        <a href="nmap://route/walk?slat=null&slng=null&sname=null&dlat={{$rows[0]->lat}}&dlng={{$rows[0]->lng}}&dname={{$rows[0]->toiletName}}&appname=https://x-angels.ml" id="serach1">{{ $rows[0]->toiletName }}</a>
+        <a href="nmap://route/walk?slat=null&slng=null&sname=null&dlat={{$rows[0]->lat}}&dlng={{$rows[0]->lng}}&dname={{$rows[0]->toiletName}}&appname=https://x-angels.ml" id="serach1">{{ $rows[0]->toiletName }}: {{floor($rows[0]->distance*1000)}}m</a>
         @endif
         <a href="plustoilet" id="serach2"></a>
     </div>
@@ -82,7 +82,6 @@
         </ul>
     </div>
 </body>
-
 </html>
 <?
     include "dbend.php";
