@@ -3522,8 +3522,6 @@ fieldset:disabled .btn {
 }
 
 .btn-dark {
-    margin: auto;
-    display: block;
     color: #fff;
     background-color: #212529;
     border-color: #212529;
@@ -4912,6 +4910,19 @@ fieldset:disabled .btn {
     background-clip: border-box;
     border: 1px solid rgba(0, 0, 0, 0.125);
     border-radius: 0.25rem;
+    transform: translateY(25%);
+}
+.card1 {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+    word-wrap: break-word;
+    background-color: #fff;
+    background-clip: border-box;
+    border: 1px solid rgba(0, 0, 0, 0.125);
+    border-radius: 0.25rem;
+    transform: translateY(5%);
 }
 .card > hr {
     margin-right: 0;
@@ -7845,7 +7856,7 @@ fieldset:disabled .btn {
 }
 
 .mt-5 {
-    margin-top: 1px !important;
+    margin-top: 3rem !important;
 }
 
 .mt-auto {
@@ -8297,7 +8308,7 @@ fieldset:disabled .btn {
 .text-muted {
     --bs-text-opacity: 1;
     color: black;
-    transform: translateX(30%);
+    transform: translateX(50%);
 }
 
 .text-black-50 {
@@ -8396,10 +8407,7 @@ fieldset:disabled .btn {
 
 .bg-white {
     --bs-bg-opacity: 1;
-    background-color: rgba(
-        var(--bs-white-rgb),
-        var(--bs-bg-opacity)
-    ) !important;
+    background-color: whitesmoke !important;
 }
 
 .bg-body {
