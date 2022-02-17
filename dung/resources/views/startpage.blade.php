@@ -42,7 +42,7 @@
             </div>
         </div>
         @if (count($rows))
-        <a href="nmap://route/walk?slat=null&slng=null&sname=null&dlat={{$rows[0]->lat}}&dlng={{$rows[0]->lng}}&dname={{$rows[0]->toiletName}}&appname=https://x-angels.ml" id="serach1">{{ $rows[0]->toiletName }}: {{floor($rows[0]->distance*1000)}}m</a>
+        <a href="nmap://route/walk?slat=null&slng=null&sname=null&dlat={{$rows[0]->lat}}&dlng={{$rows[0]->lng}}&dname={{$rows[0]->toiletName}}&appname=https://x-angels.ml" id="serach1">{{ $rows[0]->toiletName }}: {{round($rows[0]->distance*1000)}}m</a>
         @endif
         <a href="plustoilet" id="serach2"></a>
     </div>
@@ -54,7 +54,7 @@
             @foreach ($rows as $row)
             <div class="info" id="toilet_{{ $row->toiletNum }}">
                 <a class="Tname" href="#"> {{ $row->toiletName }}</a>
-                <p class="dis"><?php echo floor($row->distance*1000)
+                <p class="dis"><?php echo round($row->distance*1000)
                     ?> m</span>
                 <p>상세정보: {{$row->toiletDetail}}</p>
             </div>
