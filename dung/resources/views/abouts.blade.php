@@ -6,7 +6,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
         <meta name="description" content="" />
         <meta name="author" content="" />
-        <title>Abouts</title>
+        <title>급똥엔젤 - about</title>
         <!-- Favicon-->
         <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
         <!-- Bootstrap icons-->
@@ -17,10 +17,11 @@
     </head>
     <body>
         <!-- Product section-->
+        <div id="return" onmouseover="bold" onclick="location.href='/'"></div>
         <section class="py-5">
             <div class="container px-4 px-lg-5 my-5">
-                <div class="row_col_md_6_d">
-                    <div class="col-md-6"><img class="card-img-top mb-5 mb-md-0" src="/image/ddong.jpg" alt="..." /></div>
+                <div class="row_col_md_61_">
+                    <div class="col-md-61"><img class="card-img-top mb-5 mb-md-0" src="/image/ddong.jpg" alt="..." /></div>
                     <div class="col-md-6">
                         <h4 class="display-5 fw-bolder">급똥엔젤에 대해...</h4>
 

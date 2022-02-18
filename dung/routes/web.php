@@ -106,9 +106,6 @@ Route::post('/joinmember', function (Request $request) {
 
         DB::insert('insert into users (id, name, email, password) values (?, ?, ?, ?)', [$id, $name, $email, $password]);
 
-        return redirect('/joinmember');
-
-
     return view('login');
 });
 
