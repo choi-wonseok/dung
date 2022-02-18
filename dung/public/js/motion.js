@@ -22,7 +22,7 @@ $(document).mouseup(function (e) {
     if (target.has(e.target).length == 0) {
         $(".menu_bg").hide();
         target.animate({
-            left: "-" + 50 + "%",
+            left: "-" + 60 + "%",
         });
     }
 });
@@ -60,7 +60,7 @@ function closePopup() {
 }
 
 $(function () {
-    $(".info").slice(0, 7).show();
+    $(".info").slice(0, 5).show();
     $("#more").on("click", function (e) {
         e.preventDefault();
         $(".info:hidden").slice(0, 4).fadeIn("slow");
