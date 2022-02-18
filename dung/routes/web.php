@@ -58,7 +58,6 @@ Route::get('/login', [inside::class , 'index']);
 Route::post('/login', [inside::class , 'login']);
 Route::get('/logout', [inside::class , 'logout']);
 
-
 Route::get('/maker', function () {
     return view('maker');
 });
@@ -86,13 +85,49 @@ Route::post('/plustoilet', function (Request $request) {
 Route::get('/joinmember', function () {
     return view('joinmember');
 });
+
 Route::post('/joinmember', function (Request $request) {
-    $id = $request->input("inputID", "");
-    $name = $request->input("inputName", "");
-    $email = $request->input("inputEmail", "");
-    $password = $request->input("inputPassword", "");
+    $id = $request->input("inputID", null);
+    $name = $request->input("inputName", null);
+    $email = $request->input("inputEmail", null);
+    $password = $request->input("inputPassword", null);
 
+    try {
+        DB::insert('insert into users (id, name, email, password) values (?, ?, ?, ?)', [$id, $name, $email, $password]);
+    } catch (\Throwable $th) {
+        return redirect('/joinmember');
+    }
 
-    DB::insert('insert into users (id, name, email, password) values (?, ?, ?, ?)', [$id, $name, $email, $password]);
     return view('login');
 });
+
+// 클라이언트
+/** 입력했을 때, 들어가면 안 되는 값
+ * 클라에서 막기 <- 회원가입, id는 특수문자 x
+ * 클라에서 보내준 다음 서버 응답에 따라
+ *  <- 로그인, 비밀번호가 틀림, id 없다
+ *  회원가입 이미 존재하는 id
+ *
+*/
+// 서버
+/**
+ * 서버 input을 DB로 보내면
+ * DB 제약조건에 따라 에러메시지
+ * 에러 예방: 조건 분기를 이용해서 처리를 할 건가
+ * 에러 후처리: DB 에러에 따라서 에러 처리를 할 건가
+ */
+// DB
+/**
+ * not null 걸 건가
+ * "" UK 걸 건가
+ * "" <-> null
+ * 서버 SELECT 단일 x, 복수 쿼리 array
+ * [[id=>"",pw=>""],[id=>"",pw=>""]] length 2
+ * [[id=>"",pw=>""]] length 1
+ * [] length 0
+ */
+
+
+
+
+
