@@ -83,11 +83,10 @@
                 @foreach ($rows as $row)
                     @if($uid == $row->maker)
                     <ul><a href="#">{{ $row->toiletName }}</a></ul>
-                     @else
                         <?php $nolist = 1; ?>
                     @endif
                 @endforeach
-                @if ($nolist == 1)
+                @if ($nolist == 0)
                     <h4>엔젤이 없어요</h4>
                 @endif
 
