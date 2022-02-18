@@ -77,18 +77,20 @@
             </li>
 
             <div class="myadd">
-                My 엔젤:
+                ㅡMy 엔젤ㅡ
                 <br>
                 <?php $nolist = 0; ?>
                 @foreach ($rows as $row)
                     @if($uid == $row->maker)
-                    <ul><a href="#">{{ $row->toiletName }}</a></ul>
-                        <?php $nolist = 1; ?>
+                        <ul><a href="#" style="color: gray">{{ $row->toiletName }}</a></ul>
+                                <?php $nolist = 1; ?>
                     @endif
                 @endforeach
+
                 @if ($nolist == 0)
-                    <h4>엔젤이 없어요</h4>
+                    엔젤이 없어요
                 @endif
+
 
             </div>
             <li><a href="/abouts">About</a></li>

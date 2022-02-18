@@ -235,6 +235,7 @@ html {
     position: relative;
     left: 20px;
     font-family: georgia;
+    text-shadow: 2px 2px 2px lightcoral;
 }
 .loading {
     width: 100%;
@@ -352,7 +353,8 @@ html {
 }
 
 .myadd {
-    font-size: 20px;
+    font-size: medium;
     position: inherit;
     display: none;
+    color: rosybrown;
 }
