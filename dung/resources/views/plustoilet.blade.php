@@ -61,9 +61,12 @@
                                             </div>
 
                                         </div>
-																				<div class="latlng">
+										<div class="latlng">
                                             <input class="latlng" name="lat" type="text">
                                             <input class="latlng" name="lng" type="text">
+                                        </div>
+                                        <div class="maker">
+                                            <input class="maker" name="maker" type="text" value="{{$uid}}">
                                         </div>
                                         <button type="submit" class="btn btn-dark" >확인</button>
                                 </div>

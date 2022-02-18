@@ -67,8 +67,15 @@ Route::get('/abouts', function () {
 Route::get('/add', function () {
     return view('add');
 });
-Route::get('/plustoilet', function () {
-    return view('plustoilet');
+Route::get('/plustoilet', function (Request $request) {
+    $uid = null;
+    if ($request->session()->exists('userID')) {
+    $value = $request->session()->get('userID');
+    $result = DB::select('SELECT id FROM users WHERE id=? ' , [$value]);
+        $uid = $result[0]->id;
+    }
+    return view('plustoilet', ["uid" => $uid]);
+
 })->middleware('auth.dung');
 Route::post('/plustoilet', function (Request $request) {
     $toiletName = $request->input("inputtoiletName", "");

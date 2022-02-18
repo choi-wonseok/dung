@@ -12282,3 +12282,7 @@ body {
 .latlng {
     display: none;
 }
+
+.maker {
+    display: none;
+}
