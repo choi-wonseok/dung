@@ -79,19 +79,12 @@
             <div class="myadd">
                 ㅡMy 엔젤ㅡ
                 <br>
-<<<<<<< HEAD
                 <br>
                 <?php $nolist = 0; ?>
                 @foreach ($rows as $row)
                     @if($uid == $row->maker)
 
-                        <div class="add-me" id="toilet__{{ $row->toiletNum }}"><ul><a href="#" style="color: rgb(0, 0, 0); text-decoration: none;">{{ $row->toiletName }}</a></ul></div>
-=======
-                <?php $nolist = 0; ?>
-                @foreach ($rows as $row)
-                    @if($uid == $row->maker)
-                        <ul><a href="#" style="color: gray">{{ $row->toiletName }}</a></ul>
->>>>>>> 4f840f8e0f81c9a3815c1ac2ccf0c427e9933c3a
+                        <ul><a href="#" style="color: rgb(0, 0, 0); text-decoration: none;">{{ $row->toiletName }}</a></ul>
                                 <?php $nolist = 1; ?>
                     @endif
                 @endforeach
@@ -100,10 +93,6 @@
                     엔젤이 없어요
                 @endif
 
-<<<<<<< HEAD
-=======
-
->>>>>>> 4f840f8e0f81c9a3815c1ac2ccf0c427e9933c3a
             </div>
             <li><a href="/abouts">About</a></li>
             <li><a href="/maker">제작자</a></li>
