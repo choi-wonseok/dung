@@ -84,8 +84,8 @@
                 @foreach ($rows as $row)
                     @if($uid == $row->maker)
 
-                        <ul><a href="#" style="color: rgb(0, 0, 0); text-decoration: none;">{{ $row->toiletName }}</a></ul>
-                                <?php $nolist = 1; ?>
+                    <div class="add-me" id="toilet__{{ $row->toiletNum }}"><ul><a href="#" style="color: rgb(0, 0, 0); text-decoration: none;">{{ $row->toiletName }}</a></ul></div>
+                    <?php $nolist = 1; ?>
                     @endif
                 @endforeach
 
