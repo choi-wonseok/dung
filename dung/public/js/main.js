@@ -2,7 +2,10 @@ var HOME_PATH = window.HOME_PATH || ".";
 var coords;
 var locationBtnHtml =
     '<div class="btn_mylct" id="btn_mylct"><a href="#"></a></div>';
-
+var locationBtnHtml1 =
+    '<div id="toilet_{{ $row->toiletNum }}"><a href="#"></a></div>';
+var locationBtnHtml2 =
+    '<div id="toilet__{{ $row->toiletNum }}"><a href="#"></a></div>';
 //GPS
 function getLocation() {
     if (navigator.geolocation) {
@@ -58,7 +61,6 @@ function getLocation() {
 
                 $(".toilet").each(function (index) {
                     let row = $(`.toilet:nth-child(${index + 1})`);
-
                     //지도 이동
                     var toilet_num = row.attr("toiletNum");
                     var a = new naver.maps.LatLng(
@@ -67,6 +69,11 @@ function getLocation() {
                     );
                     $("#toilet_" + toilet_num).on("click", function (e) {
                         map.setCenter(a);
+                        console.log(e);
+                    });
+                    $("#toilet__" + toilet_num).on("click", function (e) {
+                        map.setCenter(a);
+                        console.log(e);
                     });
 
                     var marker = new naver.maps.Marker({
@@ -88,9 +95,10 @@ function getLocation() {
                                     )}</a></div>` +
                                     `<div class="content-detail"> ${row.attr(
                                         "toiletDetail"
-                                    )} <br> ${(
-                                        1000 * row.attr("distance")
-                                    ).toFixed(0)}m </div>` +
+                                    )} <br> ${row.attr("ToiletPaper")} <br>
+                                    ${(1000 * row.attr("distance")).toFixed(
+                                        0
+                                    )}m </div>` +
                                     "</div>",
                             ].join(""),
                             size: new naver.maps.Size(38, 58),
@@ -137,13 +145,15 @@ function getLocation() {
 
 getLocation();
 
-function overCrime(childID) {
-    $("#" + childID).show();
-}
-function outCrime(childID) {
-    $("#" + childID).hide();
-}
-
-function navClose() {
-    document.getElementById("menuicon").checked = false;
-}
+$(document).ready(function () {
+    $(".my-add").click(function (event) {
+        event.stopPropagation();
+        $(".myadd").slideToggle("slow");
+    });
+    $(".myadd").on("click", function (event) {
+        event.stopPropagation();
+    });
+});
+$(document).on("click", function () {
+    $(".myadd").hide();
+});

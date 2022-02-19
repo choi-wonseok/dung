@@ -23,12 +23,9 @@
 </head>
 
 <body>
-    <div class="loading">
-        <div id="loading-img"></div>
-    </div>
     @foreach ($rows as $row)
     <div class="toilet" toiletName="{{ $row->toiletName }}" toiletNum="{{$row->toiletNum}}"
-        toiletDetail="{{$row->toiletDetail}}" lat="{{$row->lat}}" lng="{{$row->lng}}" distance="{{$row->distance}}"></div>
+        toiletDetail="{{$row->toiletDetail}}" lat="{{$row->lat}}" lng="{{$row->lng}}" distance="{{$row->distance}}" ToiletPaper="{{$row->ToiletPaper}}"></div>
     @endforeach
 
     <input type="checkbox" id="menuicon" />
@@ -50,11 +47,10 @@
     <div id="popup" class="hide">
         <div id="content" class="hide">
             <div class="popup_header">목록보기</div>
-
             @foreach ($rows as $row)
             <div class="info" id="toilet_{{ $row->toiletNum }}">
                 <a class="Tname" href="#"> {{ $row->toiletName }}</a>
-                <p class="dis"><?php echo round($row->distance*1000)
+                <p class="dis"><?php echo floor($row->distance*1000)
                     ?> m</span>
                 <p>상세정보: {{$row->toiletDetail}}</p>
             </div>
@@ -73,7 +69,31 @@
             </a>
         </div>
         <ul class="menu_wrap">
-            <li><a href="/login">{{$uid ?? "로그인"}}</a></li>
+            <li> @if ($uid == null)
+                <a href="/login">로그인</a>
+                @else
+                <a href="#" class="my-add"> {{$uid}}</a>
+                @endif
+            </li>
+
+            <div class="myadd">
+                ㅡMy 엔젤ㅡ
+                <br>
+                <br>
+                <?php $nolist = 0; ?>
+                @foreach ($rows as $row)
+                    @if($uid == $row->maker)
+
+                        <div class="add-me" id="toilet__{{ $row->toiletNum }}"><ul><a href="#" style="color: rgb(0, 0, 0); text-decoration: none;">{{ $row->toiletName }}</a></ul></div>
+                                <?php $nolist = 1; ?>
+                    @endif
+                @endforeach
+
+                @if ($nolist == 0)
+                    엔젤이 없어요
+                @endif
+
+            </div>
             <li><a href="/abouts">About</a></li>
             <li><a href="/maker">제작자</a></li>
             <li>  @if ($uid != null)
@@ -82,6 +102,7 @@
         </ul>
     </div>
 </body>
+
 </html>
 <?
     include "dbend.php";
