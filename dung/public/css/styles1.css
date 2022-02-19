@@ -12282,7 +12282,10 @@ body {
 .latlng {
     display: none;
 }
-
 .maker {
     display: none;
+}
+
+.loginfail {
+    color: red;
 }

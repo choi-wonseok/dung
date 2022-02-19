@@ -3,9 +3,14 @@ var coords;
 var locationBtnHtml =
     '<div class="btn_mylct" id="btn_mylct"><a href="#"></a></div>';
 var locationBtnHtml1 =
+<<<<<<< HEAD
     '<div id="toilet_{{ $row->toiletNum }}"><a href="#"></a></div>';
 var locationBtnHtml2 =
     '<div id="toilet__{{ $row->toiletNum }}"><a href="#"></a></div>';
+=======
+    '<div class="info" id="toilet_{{ $row->toiletNum }}"><a href="#"></a></div>';
+
+>>>>>>> 4f840f8e0f81c9a3815c1ac2ccf0c427e9933c3a
 //GPS
 function getLocation() {
     if (navigator.geolocation) {
@@ -106,6 +111,7 @@ function getLocation() {
                         },
                         draggable: false,
                     });
+                    console.log(index);
 
                     $(document).ready(function () {
                         $("#image_" + index).click(function (event) {

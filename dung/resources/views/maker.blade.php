@@ -5,7 +5,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
         <meta name="description" content="" />
         <meta name="author" content="" />
-        <title>Create by</title>
+        <title>급똥엔젤 - 제작자</title>
         <!-- Favicon-->
         <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
         <!-- Bootstrap icons-->
@@ -60,7 +60,7 @@
             </div>
         </section>
         <footer class="py-5 bg-dark">
-            <div class="container"><p class="m-0 text-center text-white">X세대 &copy; 최현 임근웅 최원석</p></div>
+            <div class="container"><p class="m-0 text-center text-white">X세대 &copy; 최현 임근웅 최원석 2022</p></div>
         </footer>
         <!-- Bootstrap core JS-->
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>

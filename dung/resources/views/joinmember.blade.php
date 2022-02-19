@@ -19,9 +19,9 @@
             <main>
                 <div class="container">
                     <div class="row justify-content-center">
-                        <div class="col-lg-5">
-                            <div class="card shadow-lg border-0 rounded-lg mt-5">
+                            <div class="card1 shadow-lg border-0 rounded-lg mt-5" style="background-color: whitesmoke;">
                                 <div class="card-header">
+                                    <div id="return"  onclick="location.href='/'"></div>
                                     <h3 class="text-center font-weight-light my-4">
                                         <i class="fas fa-poo"></i>&nbsp급똥엔젤
                                     </h3>
@@ -33,44 +33,44 @@
                                         @csrf
                                         <div class="form-floating mb-3">
                                             <input class="form-control" name="inputName" type="text"
-                                                placeholder="name" />
+                                                placeholder="name" required/>
                                             <label for="inPutName">이름</label>
                                         </div>
                                         <div class="form-floating mb-3">
                                             <input class="form-control" name="inputEmail" type="email"
-                                                placeholder="name@example.com" />
+                                                placeholder="name@example.com" required />
                                             <label for="inputEmail">이메일</label>
                                         </div>
                                         <div class="form-floating mb-3">
-                                            <input class="form-control" name="inputID" type="text" placeholder="id" />
+                                            <input class="form-control" name="inputID" type="text" placeholder="id" required/>
                                             <label for="inputID">아이디</label>
                                         </div>
                                         <div class="form-floating mb-3">
                                             <input class="form-control" name="inputPassword" type="password"
-                                                placeholder="Password" />
+                                                placeholder="Password" required />
                                             <label for="inputPassword">비밀번호</label>
                                         </div>
                                         <div class="form-floating mb-3">
                                             <input class="form-control" name="inputPasswordcheck" type="password"
-                                                placeholder="Password" />
+                                                placeholder="Password" required />
                                             <label for="inputPasswordcheck">비밀번호 확인</label>
                                             <br></br>
                                             <button type="submit" class="btn btn-dark">확인</button>
                                         </div>
                                     </form>
                                 </div>
+
                                 <div class="card-footer text-center py-3">
                                     <div class="small">
                                         <a href="login" style="color: black">로그인하기</a>
                                     </div>
                                 </div>
                             </div>
-                        </div>
                     </div>
                 </div>
             </main>
         </div>
-        <div id="layoutAuthentication_footer">
+        <div id="layoutAuthentication_footer" style="transform:translateY(200%); ">
             <footer class="py-4 bg-light mt-auto">
                 <div class="container-fluid px-4">
                     <div class="d-flex align-items-center justify-content-between small">

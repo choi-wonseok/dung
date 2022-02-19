@@ -14,6 +14,7 @@
 </head>
 
 <body class="bg-white">
+
     <div id="layoutAuthentication">
         <div id="layoutAuthentication_content">
             <main>
@@ -22,7 +23,7 @@
                         <div class="col-lg-5">
                             <div class="card shadow-lg border-0 rounded-lg mt-5">
                                 <div class="card-header">
-                                    <div id="return" onclick="location.href='/'"></div>
+                                    <div id="return"  onclick="location.href='/'"></div>
                                     <h3 class="text-center font-weight-light my-4">
                                         <i class="fas fa-poo"></i>&nbsp급똥엔젤
                                     </h3>
@@ -32,14 +33,20 @@
                                     <form action="/login" method="POST">
                                         @csrf
                                         <div class="form-floating mb-3">
-                                            <input class="form-control" name="inputID" type="text" placeholder="ID" />
+                                            <input class="form-control" id="inputID" name="inputID" type="text" placeholder="ID"  required/>
                                             <label for="inputID">아이디</label>
                                         </div>
                                         <div class="form-floating mb-3">
                                             <input class="form-control" name="inputPassword" type="password"
-                                                placeholder="Password" />
+                                                placeholder="Password" required/>
                                             <label for="inputPassword">비밀번호</label>
                                         </div>
+                                    @if ($alert = Session::get('alert-fail'))
+                                    <div class="loginfail">
+                                        {{ $alert }}
+                                    </div>
+                                    <br>
+                                    @endif
                                         <div class="form-check mb-3">
                                             <input class="form-check-input" id="inputRememberPassword" type="checkbox"
                                                 value="" />
@@ -63,19 +70,23 @@
                 </div>
             </main>
         </div>
-        <div id="layoutAuthentication_footer">
+        <div id="layoutAuthentication_footer" style="transform:translateY(520%);" >
             <footer class="py-4 bg-light mt-auto">
                 <div class="container-fluid px-4">
                     <div class="d-flex align-items-center justify-content-between small">
-                        <div class="text-muted">X세대 &copy; 최현 최원석 임근웅 2022</div>
+                        <div class="text-muted" style="text-align: center;">X세대 &copy; 최현 최원석 임근웅 2022</div>
                     </div>
                 </div>
             </footer>
         </div>
-    </div>
+
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous">
-    </script>
+    </>
     <script src="js/scripts.js"></script>
+    <script>
+        // 정규표현식 regexp [a-zA-Z0-9]*
+        // JQuery, input 찾아서 다른 값 못 넣게 하기
+    </script>
 </body>
 
 </html>

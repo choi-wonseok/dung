@@ -7,6 +7,7 @@ use Illuminate\Support\Facades\Route;
 
 use App\Http\Controllers\Main as inside;
 
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -36,11 +37,11 @@ Route::get('/', function (Request $request) {
         $lngMax = $lng + 0.022;
 Log::info($latMin);
         // $rows = DB::select("select * from table_toilet where (lat between $latMin and $latMax) and (lng between $lngMin and $lngMax);", []);
-        $rows = DB::SELECT("SELECT toiletNum, toiletName, lat, lng, maker, toiletDetail,(6371 * acos (cos ( radians($lat) ) * cos( radians( lat ) ) * cos( radians( lng ) - radians($lng) ) + sin( radians($lat) ) * sin( radians( lat ) ))) AS distance FROM table_toilet where (lat between $latMin and $latMax) and (lng between $lngMin and $lngMax) order by distance;", []);
+        $rows = DB::SELECT("SELECT toiletNum, toiletName, lat, lng, maker, toiletDetail, ToiletPaper, (6371 * acos (cos ( radians($lat) ) * cos( radians( lat ) ) * cos( radians( lng ) - radians($lng) ) + sin( radians($lat) ) * sin( radians( lat ) ))) AS distance FROM table_toilet where (lat between $latMin and $latMax) and (lng between $lngMin and $lngMax) order by distance;", []);
     } else {
         $rows=[];
     }
-
+    Log::info(json_encode($rows));
     return view('startpage', ["rows" => $rows, "uid" => $uid]);
 });
 
@@ -78,14 +79,17 @@ Route::get('/plustoilet', function (Request $request) {
 
 })->middleware('auth.dung');
 Route::post('/plustoilet', function (Request $request) {
+
     $toiletName = $request->input("inputtoiletName", "");
     $address1 = $request->input("inputaddress", "");
 	$address2 = $request->input("inputaddressDetail","");
+    $maker = $request->input("maker","");
     $toiletDetail = $request->input("inputtoiletDetail", "");
     $lat = $request->input("lat","");
 	$lng = $request->input("lng","");
+    $ToiletPaper = $request->input("ToiletPaper","");
 
-    DB::insert('insert into table_toilet (toiletName, lat, lng, toiletDetail, address1, address2 ) values (?, ?, ?, ?, ?, ?)', [$toiletName, $lat, $lng, $toiletDetail, $address1, $address2]);
+    DB::insert('insert into table_toilet (toiletName, lat, lng, toiletDetail, maker, address1, address2, ToiletPaper ) values (?, ?, ?, ?, ?, ?, ?, ?)', [$toiletName, $lat, $lng, $toiletDetail,$maker, $address1, $address2, $ToiletPaper]);
     return redirect('/');
 });
 
@@ -99,11 +103,8 @@ Route::post('/joinmember', function (Request $request) {
     $email = $request->input("inputEmail", null);
     $password = $request->input("inputPassword", null);
 
-    try {
+
         DB::insert('insert into users (id, name, email, password) values (?, ?, ?, ?)', [$id, $name, $email, $password]);
-    } catch (\Throwable $th) {
-        return redirect('/joinmember');
-    }
 
     return view('login');
 });
@@ -133,8 +134,3 @@ Route::post('/joinmember', function (Request $request) {
  * [[id=>"",pw=>""]] length 1
  * [] length 0
  */
-
-
-
-
-

@@ -33,11 +33,11 @@
                                         @csrf
                                         <div class="form-floating mb-3">
                                             <input class="form-control" name="inputtoiletName" type="text"
-                                                placeholder="inputtoiletName" />
+                                                placeholder="inputtoiletName" required />
                                             <label for="inputtoiletName">화장실 이름</label>
                                         </div>
                                         <div class="form-floating mb-3">
-                                            <input class="form-control" name="inputaddress" type="text" placeholder="inputtoiletName" />
+                                            <input class="form-control" name="inputaddress" type="text" placeholder="inputtoiletName" required />
                                             <label for="inputaddress">주소</label>
                                         </div>
                                         <div class="form-floating mb-3">
@@ -45,15 +45,10 @@
                                             <label for="inputaddressDetail">상세주소</label>
                                         </div>
                                         <div class="form-check mb-3">
-                                            <label class="form-check-label" for="inputRememberPassword">화장지 있음</label>
-                                            <input class="form-check-input" name="inputRememberPassword" type="checkbox"
-                                                value="" />
-                                        </div>
-                                        <div class="form-check mb-3">
-                                            <label class="form-check-label" for="inputRememberPassword">화장지 없음</label>
-                                            <input class="form-check-input" name="inputRememberPassword" type="checkbox"
-                                                value="" />
+                                            <input class="form-check-input" name="ToiletPaper" type="radio" value="화장지 O" checked> 화장지 있음
                                             <br>
+                                            <input class="form-check-input" name="ToiletPaper" type="radio" value="화장지 X"> 화장지 없음
+                                        </div>
                                             <div class="form-floating mb-3">
                                                 <input class="form-control" name="inputtoiletDetail" type="text"
                                                     placeholder="추가내용" />
