@@ -9,7 +9,7 @@ $(document).ready(function () {
         $(".menu_bg").hide();
         $("#sidebar_menu").animate(
             {
-                left: "-" + 50 + "%",
+                left: "-" + 60 + "%",
             },
             function () {
                 $("#sidebar_menu").hide();
