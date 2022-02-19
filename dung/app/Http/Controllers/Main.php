@@ -5,6 +5,7 @@ use App\Http\Controllers\Controller;
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Log;
 
 
 class Main extends Controller
@@ -43,5 +44,30 @@ class Main extends Controller
     public function logout (Request $request){
         $request->session()->forget('userID');
         return redirect('/login');
+    }
+
+    public function join (Request $request) {
+        $id = $request->input("inputID", null);
+        $name = $request->input("inputName", null);
+        $email = $request->input("inputEmail", null);
+        $password = $request->input("inputPassword", null);
+
+
+        try {
+            // Validate the value...
+            $query = DB::insert('insert into users (id, name, email, password) values (?, ?, ?, ?)', [$id, $name, $email, $password]);
+        } catch (\Throwable $e) {
+            Log::info(json_encode($e->getCode()));
+            if($e->getCode() == "23000"){
+                $request->session()->put('Duplicate');
+                return redirect()->back()->with('Duplicate', '중복된 아이디입니다.');
+
+            }
+                return redirect()->back();
+
+        }
+
+
+        return view('/login');
     }
 }

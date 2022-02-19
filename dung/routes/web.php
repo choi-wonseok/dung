@@ -97,17 +97,7 @@ Route::get('/joinmember', function () {
     return view('joinmember');
 });
 
-Route::post('/joinmember', function (Request $request) {
-    $id = $request->input("inputID", null);
-    $name = $request->input("inputName", null);
-    $email = $request->input("inputEmail", null);
-    $password = $request->input("inputPassword", null);
-
-
-        DB::insert('insert into users (id, name, email, password) values (?, ?, ?, ?)', [$id, $name, $email, $password]);
-
-    return view('login');
-});
+Route::post('/joinmember',[inside::class , 'join']);
 
 // 클라이언트
 /** 입력했을 때, 들어가면 안 되는 값
