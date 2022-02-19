@@ -45,6 +45,12 @@
                                             <input class="form-control" name="inputID" type="text" placeholder="id" required/>
                                             <label for="inputID">아이디</label>
                                         </div>
+                                        @if ($duplicate = Session::get('Duplicate'))
+                                        <div class="ID-DUPLI">
+                                            {{ $duplicate }}
+                                        </div>
+                                        <BR>
+                                        @endif
                                         <div class="form-floating mb-3">
                                             <input class="form-control" name="inputPassword" type="password"
                                                 placeholder="Password" required />
